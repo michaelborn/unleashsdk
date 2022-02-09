@@ -25,6 +25,8 @@ jobs:
           
       - name: Setup CommandBox
         uses: Ortus-Solutions/setup-commandbox@main
+        with:
+          install: commandbox-docbox
 
       - name: Generate API Docs
         run: box run-script generateAPIDocs
