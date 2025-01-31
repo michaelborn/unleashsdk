@@ -8,7 +8,7 @@ component singleton accessors="true" {
 	property name="wirebox"  inject="wirebox";
 
 	property name="isRegistered" default="false";
-	property name="_isOffline"    default="false";
+	property name="_isOffline"   default="false";
 
 	variables.strategies = {
 		"default"             : "DefaultStrategy@unleashsdk",
@@ -140,7 +140,7 @@ component singleton accessors="true" {
 	) {
 		if ( variables._isOffline ) {
 			throw(
-				type = "UnleashSDK.Offline",
+				type    = "UnleashSDK.Offline",
 				message = "UnleashSDK was not provided with an API token. Features cannot be created."
 			);
 		}
